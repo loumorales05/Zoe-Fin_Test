@@ -12,7 +12,7 @@ describe('Rescheduler test suite', ()=> {
         it('Selecting reschedule day verification', ()=> {   
             //Verifying times options are not visible before selecting a day
             cy.get('.styles__TimesContainer-sc-13m8152-7').should('not.be.visible') 
-            //Getting a ramdom day value to select from calendar
+            //Getting a random day value to select from calendar
             var daySelect = Math.floor(Math.random() * 30)          
              
             cy.get('.CCDatesView__days').find('div.CCDatesView__days_day').as('dayList')
@@ -35,7 +35,7 @@ describe('Rescheduler test suite', ()=> {
         )
 
        it('Selecting reschedule time verification', ()=> { 
-           //Getting a ramdom time value to select
+           //Getting a random time value to select
            var timeSelect = Math.floor(Math.random() * 20) 
            cy.get('.CCTimesView__times').find('div.CCTimesView__times_time').as('timeList')
 
